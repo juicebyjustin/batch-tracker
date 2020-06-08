@@ -1,3 +1,28 @@
+# Batch Tracker
+This app allows for tracking batches in an industrial control system.
+
+# Database
+
+All entities have audit fields and nothing is deleted just marked as deleted in the database.
+* Created Date
+* Created User
+* Deleted Date
+* Deleted User
+* IsDeleted
+* Last Edited Date
+* Last Edited User
+
+## Tables
+* Batch: Name, Batch Date, Ingredients (serialized), MachineId
+* Ingredient: Name, Source, MSDS, Quantity on Hand
+* Equipment; Name, Installation Date
+* Equipment Maintenance: EquipmentId, (not required)
+
+
+
+---
+
+
 # <img src="https://github.com/enkodellc/blazorboilerplate/blob/master/src/BlazorBoilerplate.CommonUI/wwwroot/images/Blazor-Boilerplate-Title.png" alt="Blazor Boilerplate" style="max-wdith:100%"/>
 
 Blazor is a web framework designed to run in the browser on a WebAssembly-based .NET runtime. Blazor Boilerplate aka Blazor Starter Template is a SPA admin template that is able to BOTH (WebAssembly / Core-Hosted) and Server-Side Blazor with a .NET Core 3.1 Server. The UI for this application is by Material Design provided mostly by MatBlazor.
